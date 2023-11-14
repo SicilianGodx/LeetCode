@@ -5,42 +5,24 @@ LeetCode::LeetCode(){}
 
 //88. Merge Sorted Array - easy
 void LeetCode::merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n){
-    std::vector<int> ans;
-    std::vector<int>::iterator itr1 = nums1.begin();
-    std::vector<int>::iterator itr2 = nums2.begin();
-    int track1 = 0;
-    int track2 = 0;
+    int last_index = (m + n) - 1;
 
-    for (int i = 0; ((track1 < m) && (track2 < n)); i++){
-        std::cout << "what?" << "\n";
-        if (*itr1 < *itr2){
-            ans.push_back(*itr1);
-            itr1++;
-            track1++;
-            std::cout << track1 << "\n";
+    while ((m > 0) && (n > 0)){
+        if (nums1[m - 1] > nums2[n - 1]){
+            nums1[last_index] = nums1[m - 1];
+            m--;
         }
         else{
-            ans.push_back(*itr2);
-            itr2++;
-            track2++;
+            nums1[last_index] = nums2[n - 1];
+            n--;
         }
+        last_index--;
     }
 
-    if (track1 == m){
-        std::cout << "here!" << "\n";
-        for (int j = track2; j < (n-1); j++){
-            ans.push_back(*itr2);
-            itr2++;
-        }
-        ans.push_back(*itr2);
+    //edge case: in case the lowest value of nums2 is smaller than the lowest value of nums1
+    while(n > 0){
+        nums1[last_index] = nums2[n - 1];
+        n--;
+        last_index--;
     }
-
-    else{
-        for (int j = track1; j < (m-1); j++){
-            ans.push_back(*itr1);
-            itr1++;
-        }
-        ans.push_back(*itr1);
-    }
-    nums1 = ans;
 }

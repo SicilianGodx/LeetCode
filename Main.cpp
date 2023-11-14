@@ -5,9 +5,9 @@ int main(){
     LeetCode LeetCode;
 
     std::vector<int> nums1{1,2,3,0,0,0};
-    std::vector<int> nums2{};
+    std::vector<int> nums2{2,5,6};
     int m = 3;
-    int n = 0;
+    int n = 3;
 
     LeetCode.merge(nums1, m, nums2, n);
 
