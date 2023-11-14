@@ -1,11 +1,13 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <numeric>
 
-class Solution
+class LeetCode
 {
 public:
-    Solution();
-    void merge(std::vector<int> vec1, int nums1, std::vector<int> vec2, int num2);
+    LeetCode();
+    void merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, int n);
 private:
 };
