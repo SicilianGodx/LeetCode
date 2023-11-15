@@ -26,3 +26,15 @@ void LeetCode::merge(std::vector<int>& nums1, int m, std::vector<int>& nums2, in
         last_index--;
     }
 }
+
+//27. Remove Element - easy
+int LeetCode::removeElement(std::vector<int>& nums, int val){
+    int track = 0;
+    for (int i = 0; i < nums.size(); i++){
+        if (nums[i] != val){
+            nums[track] = nums[i];
+            track++;
+        }
+    }
+    return track;
+}

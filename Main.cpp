@@ -4,17 +4,15 @@ int main(){
     
     LeetCode LeetCode;
 
-    std::vector<int> nums1{1,2,3,0,0,0};
-    std::vector<int> nums2{2,5,6};
-    int m = 3;
-    int n = 3;
+    std::vector<int> nums{0,1,2,2,3,0,4,2};
+    int val = 2;
 
-    LeetCode.merge(nums1, m, nums2, n);
+    int k = LeetCode.removeElement(nums, val);
 
-    for (std::vector<int>::iterator itr = nums1.begin(); itr != nums1.end(); itr++){
+    for (std::vector<int>::iterator itr = nums.begin(); itr != nums.end(); itr++){
         std::cout << *itr << " ";
     }
-    std::cout << std::endl;
+    std::cout << "\nk: " << k << std::endl;
 
 
     return 0;
