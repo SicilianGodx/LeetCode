@@ -17,6 +17,8 @@ public:
 
     int removeDuplicates(std::vector<int>& nums);
 
+    int removeDuplicatesII(std::vector<int>& nums);
+
 private:
 
 };

@@ -39,10 +39,23 @@ int LeetCode::removeElement(std::vector<int>& nums, int val){
     return track;
 }
 
+//26. Remove Duplicates from Sorted Array - easy
 int LeetCode::removeDuplicates(std::vector<int>& nums){
     int index = 1;
     for (int i = 1; i < nums.size(); i++){
         if (nums[i] != nums[i - 1]){
+            nums[index] = nums[i];
+            index++;
+        }
+    }
+    return index;
+}
+
+//80. Remove Duplicates from Sorted Array II - medium
+int LeetCode::removeDuplicatesII(std::vector<int>& nums){
+    int index = 0;
+    for (int i = 0; i < nums.size(); i++){
+        if (index == 0 || index == 1 || nums[i-2]){
             nums[index] = nums[i];
             index++;
         }
