@@ -55,7 +55,7 @@ int LeetCode::removeDuplicates(std::vector<int>& nums){
 int LeetCode::removeDuplicatesII(std::vector<int>& nums){
     int index = 0;
     for (int i = 0; i < nums.size(); i++){
-        if (index == 0 || index == 1 || nums[i-2]){
+        if (index == 0 || index == 1 || nums[index-2] != nums[i]){
             nums[index] = nums[i];
             index++;
         }
