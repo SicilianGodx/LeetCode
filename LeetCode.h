@@ -19,7 +19,7 @@ public:
 
     int removeDuplicatesII(std::vector<int>& nums);
 
-    int majorityElements(std::vector<int>& nums);
+    int majorityElement(std::vector<int>& nums);
 
 private:
 
