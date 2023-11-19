@@ -21,6 +21,8 @@ public:
 
     int majorityElement(std::vector<int>& nums);
 
+    void rotate(std::vector<int>& nums, int k);
+
 private:
 
 };

@@ -69,3 +69,8 @@ int LeetCode::majorityElement(std::vector<int>& nums){
     int n = nums.size();
     return nums[n/2];
 }
+
+//189. Rotate Array - medium
+void LeetCode::rotate(std::vector<int>& nums, int k){
+
+}
