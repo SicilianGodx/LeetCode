@@ -4,8 +4,8 @@ int main(){
     
     LeetCode LeetCode;
 
-    std::vector<int> nums = {3,2,3};
-    int k = 0;
+    std::vector<int> nums = {-1,-100,3,99};
+    int k = 2;
 
     LeetCode.rotate(nums, k);
 
