@@ -4,14 +4,17 @@ int main(){
     
     LeetCode LeetCode;
 
-    std::vector<int> nums = {-1,-100,3,99};
-    int k = 2;
+    std::vector<int> nums = {3,2,3,5,-100,-100,-50,5,5};
 
-    LeetCode.rotate(nums, k);
+    int sol = LeetCode.majorityElement(nums);
 
     for (std::vector<int>::iterator itr = nums.begin(); itr != nums.end(); itr++){
         std::cout << *itr << " ";
     }
+    std::cout << "\n";
+
+    std::cout << sol << std::endl;
+
 
     return 0;
 }

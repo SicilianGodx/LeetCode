@@ -65,9 +65,21 @@ int LeetCode::removeDuplicatesII(std::vector<int>& nums){
 
 //169. Majority Element - easy
 int LeetCode::majorityElement(std::vector<int>& nums){
-    sort(nums.begin(), nums.end());
-    int n = nums.size();
-    return nums[n/2];
+    std::unordered_map<int, int> count;
+    for(int i:nums){
+        count[i]++;
+    }
+    int maxVal = nums[0];
+    for (auto k:count){
+        std::cout << k.first << " - " << k.second << "\n";
+    }
+    std::cout << std::endl;
+    for (auto x:count){
+        if (x.second > count[maxVal]){
+            maxVal = x.first;
+        }
+    }
+    return maxVal;
 }
 
 //189. Rotate Array - medium

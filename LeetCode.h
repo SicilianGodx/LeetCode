@@ -3,6 +3,8 @@
 #include <vector>
 #include <algorithm>
 #include <numeric>
+#include <map>
+#include<unordered_map>
 
 class LeetCode
 {
