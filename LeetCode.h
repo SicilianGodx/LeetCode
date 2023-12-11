@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <numeric>
 #include <map>
-#include<unordered_map>
+#include <unordered_map>
 
 class LeetCode
 {
@@ -24,6 +24,8 @@ public:
     int majorityElement(std::vector<int>& nums);
 
     void rotate(std::vector<int>& nums, int k);
+
+    int maxProfit(std::vector<int>& prices);
 
 private:
 

@@ -101,3 +101,23 @@ void LeetCode::rotate(std::vector<int>& nums, int k){
     }
     nums = temp;
 }
+
+//121. Best Time to Buy and Sell Stock - easy
+int LeetCode::maxProfit(std::vector<int>& prices){
+    int L = 0;
+    int R = 1;
+    int maxProfit = 0;
+    int profit = 0;
+
+    while(R < prices.size()){
+        if (prices[L] < prices[R]){
+            profit = prices[R] - prices[L];
+            maxProfit = std::max(maxProfit, profit);
+        }
+        else{
+            L = R;
+        }
+        R += 1;
+    }
+    return maxProfit;
+}

@@ -4,14 +4,14 @@ int main(){
     
     LeetCode LeetCode;
 
-    std::vector<int> nums = {3,2,3,5,-100,-100,-50,5,5};
+    std::vector<int> nums = {7,1,5,3,6,4};
 
-    int sol = LeetCode.majorityElement(nums);
+    int sol = LeetCode.maxProfit(nums);
 
     for (std::vector<int>::iterator itr = nums.begin(); itr != nums.end(); itr++){
         std::cout << *itr << " ";
     }
-    std::cout << "\n";
+    std::cout << "\nProfit: ";
 
     std::cout << sol << std::endl;
 
