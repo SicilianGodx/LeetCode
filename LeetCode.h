@@ -27,6 +27,10 @@ public:
 
     int maxProfit(std::vector<int>& prices);
 
+    int maxProfitII(std::vector<int>& prices);
+
+    bool canJump(std::vector<int>& nums);
+
 private:
 
 };
